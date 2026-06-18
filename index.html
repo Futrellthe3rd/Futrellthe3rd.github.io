@@ -2,92 +2,92 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-* {box-sizing: border-box}
-
-/* Set height of body and the document to 100% */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
   float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
   border: none;
   outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
   color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
 }
 
-#ABOUT ESUMS {background-color: red;}
-#Screenprinting project {background-color: green;}
-#Black box project {background-color: blue;}
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
 </head>
-<body>
+<body style="background-color:white;">
 
-<button class="tablink" onclick="openPage('ABOUT ESUMS', this, 'red')">Home</button>
-<button class="tablink" onclick="openPage('Screenprinting project', this, 'green')" id="defaultOpen">News</button>
-<button class="tablink" onclick="openPage('Black box project', this, 'blue')">Contact</button>
-
-
-<div id="ABOUT ESUMS" class="tabcontent">
-  <h3>The Engineering and Science University Magnet School (ESUMS) is a highly regarded public college-preparatory middle and high school (grades 6-12) located in West Haven, Connecticut. Serving a diverse student body from New Haven and surrounding towns, ESUMS focuses on empowering the next generation of STEM leaders.ESUMS stands out for its robust curriculum built upon the Project Lead the Way (PLTW) framework, which allows students to take engineering courses every year from grades 6 to 12. High schoolers can earn college credit through rigorous coursework and Advanced Placement (AP) classes. Project-based learning is heavily integrated into the classroom, with students completing hands-on projects like designing flight simulators, building robots, and creating video games.A defining feature of the institution is its close educational partnership with the University of New Haven (UNH). This collaboration provides students with early exposure to university-level engineering and allows eligible high schoolers to take college classes for credit. Through programs like this, clubs such as Girls Who Code and Future Business Leaders of America (FBLA), and a highly rated academic environment, ESUMS continuously outperforms local district averages in both reading and mathematics. </h3>
-  <p>Home is where the heart is..</p>
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
 </div>
 
-<div id="News" class="tabcontent">
-  <h3>News</h3>
-  <p>Some news this fine day!</p> 
-</div>
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
 
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
-
-
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-   
 </body>
-</html> 
-
-
- 
- 
+</html>

@@ -1,114 +1,97 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:powderblue;">
-
-
-<h1>Wilsons  screen printing project</h1>
-
-<p>My first paragraph.</p>
-
-</head>
-<h1>Black box Investigation</h1>
-<p> In the engineering science university magnet schools new media for social change freshman class taught by Mr.Sinusas challenged us to investigate a mystery black box. During this rigorous project Because of which We were able to use programs including but not limited to Adobe Photoshop, Maya 3D software. Even throughout those processes the critical question still remains "what's inside the mystery black box?". The Affirmation Question dared my teammates to Dream, Imagine, investigate, communicate, document, design and most importantly ask questions.
-
-
-<h2>claim</h2>"what's inside the mystery black box?"
-
-<h2>evidence</h2></p>
-Even after months of development and modeling the pulverizing question still remains "what's inside the mystery black box?" I'm still trying to decipher the mystery black box mechanism. Evan thought I have a diagram detailing how the black box may work.
-
-
-
-                                
-
-
-
-
-
-</p>Evan thought I have a diagram detailing how the black box may work. Yet confusion still prevails against all effort. Some peers have raised multiply theories that don't carry much weight in my eyes. One of those theories is a tipping bucket this theory is not possible beyond dis-Belief because if there was a tipping bucket there would be noise  of the water splashing and would not be logistically possible.
-
-</p>Photography wasn't just a side note-it was front and center. We had to capture every step, from brainstorming to actually building the black box model. Documenting everything wasn't busywork; it was essential. Without those photos, so many details would've just slipped away. We didn't just point and shoot, either. We used different angles, played with the rule of thirds, and really tried to make every photo show both the technical side and the creativity behind what we were doing.
-
-
-<h2>brainstorming order</h2>
-
-<ol>
-  <li>Dream</li>
-  <li>Imagine</li>
-  <li>Investigate</li> 
-  <li>communicate</li>
-   <li>document</li>
-   <li>Ask question</li>
-</ol> 
-
-<!DOCTYPE html>
-<html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 40%;
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
 }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+.tablink:hover {
+  background-color: #777;
 }
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
 </style>
 </head>
 <body>
 
-<h2>trial input & output</h2>
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-<table>
-  <tr>
-    <th>trial #</th>
-    <th>Imput(ml)</th>
-    <th>Output(ml)#</th>
-  </tr>
-  <tr>
-    <td> 1 </td>
-    <td> numbers</td>
-    <td> numbers</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-</table>
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
 
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
 </body>
-</html>
+</html> 
 
 
-</html>
-
-
-
+ 
+ 

@@ -1,0 +1,8 @@
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  background-color: #27DAF5;
+  padding: 30px;
+  margin: 10px;
+  
+}

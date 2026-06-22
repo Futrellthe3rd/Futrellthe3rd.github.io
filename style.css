@@ -11,7 +11,31 @@
   background-color: red;
 }
 
-background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #ff9ff3 100%);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient Background Example</title>
+    <style>
+        /* Target the entire page body */
+        body {
+            /* Fallback color if gradients fail to load */
+            background-color: #ff007f; 
+            /* Linear gradient blending from pink to blue at a 45-degree angle */
+            background-image: linear-gradient(45deg, #ff007f, #7f00ff);
+            /* Prevent the background image from repeating */
+            background-repeat: no-repeat;
+            /* Force the body to take up at least 100% of the viewport height */
+            min-height: 100vh;
+            /* Remove default browser outer margins */
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+
 }
 
 }

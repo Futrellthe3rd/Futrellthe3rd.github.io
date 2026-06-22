@@ -11,13 +11,7 @@
   background-color: red;
 }
 
-.gradient-bg {
-  background: linear-gradient(to bottom, #00008B 0%, #FFFFFF 100%);
-  min-height: 100vh; /* Ensures the gradient covers the full viewport height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333; /* Dark text for readability on the white portion */
+background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 }

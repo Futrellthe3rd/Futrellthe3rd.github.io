@@ -11,7 +11,14 @@
   background-color: red;
 }
 
-body {
-  background-color: coral;
+.gradient-bg {
+  background: linear-gradient(to bottom, #00008B 0%, #FFFFFF 100%);
+  min-height: 100vh; /* Ensures the gradient covers the full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333; /* Dark text for readability on the white portion */
+}
+
 }
 <p style="line-height: 1.6;">This paragraph has custom line spacing. The lines are spaced at 1.6 times the font size.</p>

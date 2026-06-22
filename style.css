@@ -14,3 +14,4 @@
 body {
   background-color: coral;
 }
+<p style="line-height: 1.6;">This paragraph has custom line spacing. The lines are spaced at 1.6 times the font size.</p>
